@@ -38,7 +38,9 @@ function listaProductSeleccion(){
             seleccionarProducto=amoladora;
            
             break;        
-        
+        default:
+            alert('Seleccion un producto de la lista por favor')
+            break;
     }
 
     
@@ -55,7 +57,6 @@ let condicion=1;
 
     while(option==false){
         condicion=Number(condicion); 
-
         if(condicion==1){
             totalCompra+=listaProductSeleccion();
                  
