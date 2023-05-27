@@ -99,12 +99,16 @@ function deleteProduct() {
 function modifyProduct(nameProduct1) {
   let index;
   const nameProduct = nameProduct1;
-  const option = prompt("Que desea modificar?");
+  const option = prompt(`
+  Que desea modificar?
+  Nombre
+  Precio
+  Stock`);
   let newName;
   let newPrice;
   let newStock;
   switch (option) {
-    case "nombre":
+    case "nombre" || "Nombre":
       for (let i = 0; i < productList.length; i++) {
         if (nameProduct === productList[i].name) {
           index = i;
@@ -114,7 +118,7 @@ function modifyProduct(nameProduct1) {
       }
       break;
 
-    case "precio":
+    case "precio" || "Precio":
       for (let i = 0; i < productList.length; i++) {
         if (nameProduct === productList[i].name) {
           index = i;
@@ -124,7 +128,7 @@ function modifyProduct(nameProduct1) {
       }
       break;
 
-    case "stock":
+    case "stock" || "Stock":
       for (let i = 0; i < productList.length; i++) {
         if (nameProduct === productList[i].name) {
           index = i;
