@@ -29,9 +29,12 @@ let productList = [
 ];
 
 function productsShow() {
-  for (product of productList) {
-    console.log(product);
+ let msj ="PRODUCTOS"
+ for (product of productList) {
+    msj=msj+`\nNombre: ${product.name}\nPrecio: $${product.price}\nStock: ${product.stock}\n`;
   }
+
+  alert(msj)
 }
 
 function producSum() {
